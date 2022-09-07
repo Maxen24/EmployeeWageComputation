@@ -7,26 +7,35 @@ package com.bridgelabz;
  * @author mshub
  *
  */
-import java.lang.Math;
+import java.util.Random; 
+/**
+ * 
+ *
+ */
 public class EmployeeWage {
 
 	/**
 	 * @param args
 	 */
-	public void employeeIsPresentOrNot() {
-		
-	}
 	public static void main(String[] args) {
-		//Driving Code
-		double a= Math.random();
-		double Ispresent=0.5;
-		if (a>=Ispresent) {
-			System.out.println("Employee is present");
-		}else {
-			System.out.println("Employee is absent");
-		}
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to Employee Wage Computation Program");
+	      
+		Random random= new Random();
+		int attendance=random.nextInt(2);
+		int WagePerHour=20;
+		int FullDay=8;
+		int DailyWage=0;
 		
-
+		if(attendance == 1) {
+			System.out.println("Employee Present..");
+			DailyWage=WagePerHour*FullDay;
+			System.out.println("Daily Employee Wage is "+" "+DailyWage);
+		}else
+			System.out.println("Employee Absent..");
+		System.out.println("Daily Employee Wage is "+" "+DailyWage);
+		
 	}
 
 }
+
